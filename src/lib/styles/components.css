@@ -91,6 +91,7 @@
   border:0;background:transparent;cursor:pointer;
   font-family:var(--font);font-weight:600;font-size:11.5px;color:var(--ink-2);
   height:24px;padding:0 10px;border-radius:5px;line-height:1;
+  display:inline-flex;align-items:center;justify-content:center;
 }
 .seg button.on{background:var(--surface);color:var(--ink-1);box-shadow:var(--shadow-xs);}
 [data-theme="dark"] .seg button.on{background:var(--surface-3);}
