@@ -1,0 +1,26 @@
+/* ============================================================
+   NextGen Ops · Base Styles
+   html / body resets, scrollbars, .mono / .num utility classes.
+   Requires tokens.css to be imported first.
+   ============================================================ */
+
+* { box-sizing: border-box; }
+html, body { margin: 0; height: 100%; }
+body {
+  font-family: var(--font);
+  background: var(--canvas);
+  color: var(--ink-1);
+  font-size: var(--t-body);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.mono { font-family: var(--mono); font-feature-settings: "tnum" 1; letter-spacing: -.01em; }
+.num  { font-family: var(--mono); font-feature-settings: "tnum" 1; font-variant-numeric: tabular-nums; }
+::selection { background: rgba(14, 75, 100, .20); }
+
+/* Scrollbars — subtle, brand-tinted */
+*::-webkit-scrollbar { width: 10px; height: 10px; }
+*::-webkit-scrollbar-thumb { background: var(--line-strong); border-radius: 99px; border: 2px solid transparent; background-clip: padding-box; }
+*::-webkit-scrollbar-thumb:hover { background: var(--ink-3); background-clip: padding-box; }
+*::-webkit-scrollbar-track { background: transparent; }

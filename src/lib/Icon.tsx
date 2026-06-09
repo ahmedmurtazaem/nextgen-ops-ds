@@ -1,0 +1,77 @@
+/* Single-stroke line icon set (Lucide-style, 1.75 stroke). */
+import type { CSSProperties } from "react";
+
+const ICONS: Record<string, string> = {
+  plane: "M17.8 19.2 16 11l3.5-3.5a2.1 2.1 0 0 0-3-3L13 8 4.8 6.2a.5.5 0 0 0-.5.8L9 11l-2 3H4l-1 2 3 1 1 3 2-1v-3l3-2 4.7 4.7a.5.5 0 0 0 .8-.5Z",
+  clock: "M12 7v5l3 2 M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18Z",
+  users: "M16 19v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M9 9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7 M22 19v-2a4 4 0 0 0-3-3.8 M16 2.2A3.5 3.5 0 0 1 16 9",
+  id: "M3 5h18v14H3z M7 9.5h4 M7 13h6 M16.5 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3 M14 15.5a2.5 2.5 0 0 1 5 0",
+  shield: "M12 3 5 6v6c0 4 3 6.5 7 9 4-2.5 7-5 7-9V6Z M9.2 12l2 2 3.6-4",
+  truck: "M3 6h11v9H3z M14 9h4l3 3v3h-7 M7.5 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3 M17.5 18.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3",
+  target: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18 M12 16a4 4 0 1 0 0-8 4 4 0 0 0 0 8 M12 12h.01",
+  flame: "M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.07-2.14-.22-4.05 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.15.43-2.29 1-3a2.5 2.5 0 0 0 2.5 2.5Z",
+  search: "M11 19a8 8 0 1 0 0-16 8 8 0 0 0 0 16 M21 21l-4.3-4.3",
+  bell: "M18 8a6 6 0 1 0-12 0c0 7-3 8-3 8h18s-3-1-3-8 M13.7 21a2 2 0 0 1-3.4 0",
+  gear: "M12.22 2h-.44a2 2 0 0 0-2 2v.18a2 2 0 0 1-1 1.73l-.43.25a2 2 0 0 1-2 0l-.15-.08a2 2 0 0 0-2.73.73l-.22.38a2 2 0 0 0 .73 2.73l.15.1a2 2 0 0 1 1 1.72v.51a2 2 0 0 1-1 1.74l-.15.09a2 2 0 0 0-.73 2.73l.22.38a2 2 0 0 0 2.73.73l.15-.08a2 2 0 0 1 2 0l.43.25a2 2 0 0 1 1 1.73V20a2 2 0 0 0 2 2h.44a2 2 0 0 0 2-2v-.18a2 2 0 0 1 1-1.73l.43-.25a2 2 0 0 1 2 0l.15.08a2 2 0 0 0 2.73-.73l.22-.39a2 2 0 0 0-.73-2.73l-.15-.08a2 2 0 0 1-1-1.74v-.5a2 2 0 0 1 1-1.74l.15-.09a2 2 0 0 0 .73-2.73l-.22-.38a2 2 0 0 0-2.73-.73l-.15.08a2 2 0 0 1-2 0l-.43-.25a2 2 0 0 1-1-1.73V4a2 2 0 0 0-2-2z M9 12a3 3 0 1 0 6 0 3 3 0 1 0-6 0",
+  sun: "M12 17a5 5 0 1 0 0-10 5 5 0 0 0 0 10 M12 1v2 M12 21v2 M4.2 4.2l1.4 1.4 M18.4 18.4l1.4 1.4 M1 12h2 M21 12h2 M4.2 19.8l1.4-1.4 M18.4 5.6l1.4-1.4",
+  moon: "M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z",
+  globe: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18 M3 12h18 M12 3a14 14 0 0 1 0 18 M12 3a14 14 0 0 0 0 18",
+  chevR: "M9 6l6 6-6 6",
+  chevD: "M6 9l6 6 6-6",
+  plus: "M12 5v14 M5 12h14",
+  calendar: "M3 6h18v15H3z M3 10h18 M8 3v4 M16 3v4",
+  upload: "M12 16V4 M8 8l4-4 4 4 M4 16v3a1 1 0 0 0 1 1h14a1 1 0 0 0 1-1v-3",
+  download: "M12 4v12 M8 12l4 4 4-4 M4 20h16",
+  layers: "M12 3 3 8l9 5 9-5Z M3 13l9 5 9-5 M3 18l9 5 9-5",
+  rosterCal: "M3 6h18v15H3z M3 10h18 M8 3v4 M16 3v4 M7.5 14h2 M11 14h2 M14.5 14h2 M7.5 17h2 M11 17h2",
+  dispatch: "M4 11a8 8 0 0 1 8-8 M4 15a12 12 0 0 1 12-12 M6 20a2 2 0 1 0 0-4 2 2 0 0 0 0 4",
+  chart: "M4 20V10 M10 20V4 M16 20v-7 M22 20H2",
+  grid: "M3 3h7v7H3z M14 3h7v7h-7z M14 14h7v7h-7z M3 14h7v7H3z",
+  file: "M6 2h8l4 4v16H6z M14 2v4h4 M9 13h6 M9 17h6",
+  sliders: "M4 21v-7 M4 10V3 M12 21v-9 M12 8V3 M20 21v-5 M20 12V3 M1 14h6 M9 8h6 M17 16h6",
+  building: "M4 21h16 M6 21V5l6-2v18 M12 21V8l6 2v11 M9 8h.01 M9 12h.01 M15 13h.01 M15 17h.01",
+  lock: "M5 11h14v9H5z M8 11V7a4 4 0 0 1 8 0v4",
+  check: "M5 12.5l4.5 4.5L19 7",
+  alert: "M12 3 2 20h20L12 3Z M12 9v5 M12 17h.01",
+  info: "M12 21a9 9 0 1 0 0-18 9 9 0 0 0 0 18 M12 11v5 M12 7.5h.01",
+  wand: "M15 4V2 M15 10V8 M11 6h2 M17 6h2 M9 21l9-9-2-2-9 9zM14.5 7.5l2 2",
+  x: "M6 6l12 12 M18 6 6 18",
+  panel: "M3 4h18v16H3z M9 4v16",
+  filter: "M3 5h18l-7 8v5l-4 2v-7Z",
+  dots: "M12 6h.01 M12 12h.01 M12 18h.01",
+  arrowUp: "M12 19V5 M6 11l6-6 6 6",
+  arrowDown: "M12 5v14 M6 13l6 6 6-6",
+  arrowRight: "M5 12h14 M13 6l6 6-6 6",
+  link: "M9 15l6-6 M10 7l1-1a4 4 0 0 1 6 6l-1 1 M14 17l-1 1a4 4 0 0 1-6-6l1-1",
+  spark: "M12 3v4 M12 17v4 M3 12h4 M17 12h4 M6.3 6.3l2.4 2.4 M15.3 15.3l2.4 2.4 M17.7 6.3l-2.4 2.4 M8.7 15.3l-2.4 2.4",
+  clipboard: "M9 4h6v3H9z M7 5H5v16h14V5h-2 M9 12h6 M9 16h4",
+  pin: "M12 21s7-6 7-11a7 7 0 1 0-14 0c0 5 7 11 7 11Z M12 12a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5",
+  scale: "M12 3v18 M6 7l-3 6a3 3 0 0 0 6 0L6 7Z M18 7l-3 6a3 3 0 0 0 6 0l-3-6Z M5 21h14 M7 7h10",
+  refresh: "M21 12a9 9 0 1 1-2.6-6.3 M21 3v5h-5",
+  zap: "M13 2 4 14h7l-1 8 9-12h-7z",
+  megaphone: "M3 11 21 6v12L3 14v-3z M11.6 16.8a3 3 0 1 1-5.8-1.6",
+  expand: "M8 3H5a2 2 0 0 0-2 2v3 M16 3h3a2 2 0 0 1 2 2v3 M21 16v3a2 2 0 0 1-2 2h-3 M8 21H5a2 2 0 0 1-2-2v-3",
+  collapse: "M9 3v3a2 2 0 0 1-2 2H4 M20 8h-3a2 2 0 0 1-2-2V3 M4 16h3a2 2 0 0 1 2 2v3 M15 21v-3a2 2 0 0 1 2-2h3",
+  trend: "M3 17l6-6 4 4 8-8 M15 7h6v6",
+  beaker: "M9 3h6 M10 3v6l-5 9.2A1.6 1.6 0 0 0 6.4 21h11.2a1.6 1.6 0 0 0 1.4-2.4L14 9V3 M7 14h10",
+  planeLanding: "M2 22h20 M6.4 17.4 4 17l-2-4 1.1-.55a2 2 0 0 1 1.8 0l.17.1a2 2 0 0 0 1.8 0L8 12 5 6l.9-.45a2 2 0 0 1 2.1.2l4 3a2 2 0 0 0 .9.42l7.5 1.37a2 2 0 0 1 1.62 2.21l-.04.21a2 2 0 0 1-2.5 1.53L8 14",
+  timeline: "M8 6h11 M6 12h13 M10 18h9 M4 6h.01 M4 12h.01 M4 18h.01",
+  logout: "M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4 M16 17l5-5-5-5 M21 12H9",
+  minus: "M5 12h14",
+  pencil: "M4 20h4L18 10l-4-4L4 16v4 M13.5 6.5l4 4",
+  trash: "M4 7h16 M9 7V4.5h6V7 M6.5 7l1 12.5h9l1-12.5",
+  pause: "M8 5v14 M16 5v14",
+};
+
+export function Icon({
+  name, size = 18, stroke = 1.75, className, style,
+}: { name: string; size?: number; stroke?: number; className?: string; style?: CSSProperties }) {
+  const d = ICONS[name];
+  if (!d) return null;
+  return (
+    <svg className={className} style={style} width={size} height={size} viewBox="0 0 24 24"
+         fill="none" stroke="currentColor" strokeWidth={stroke} strokeLinecap="round" strokeLinejoin="round">
+      {d.split(" M").map((seg, i) => <path key={i} d={(i ? "M" : "") + seg} />)}
+    </svg>
+  );
+}

@@ -1,0 +1,189 @@
+/* ============================================================
+   NextGen Ops · Design Tokens
+   Brand: SGS · Petroleum (#0E4B64) + Green (#61B947)
+   Light-first ops console with dark mode + density modes + RTL.
+   ============================================================ */
+
+:root {
+  /* ===== Brand ===== */
+  --petroleum: #0E4B64;
+  --petroleum-600: #155B77;
+  --petroleum-500: #1F6E8C;
+  --green: #61B947;
+  --green-700: #4E9B39;
+  --green-600: #61B947;
+  --green-800: #3E7D2D;
+  --gold: #E0A400;
+  --danger: #C0392B;
+  --info: #1F6E8C;
+
+  /* ===== Function categorical palette (brand-anchored) =====
+     Used for the seven ground-handling functions. Anchored to the
+     brand so combinations of petroleum / green / gold harmonize. */
+  --fn-bagop:    #1F6E8C;
+  --fn-bagrep:   #D98248;
+  --fn-basement: #5AA641;
+  --fn-drivers:  #6A6FC4;
+  --fn-ramp:     #E0A400;
+  --fn-tech:     #B85C8E;
+  --fn-trc:      #2C9C93;
+
+  /* ===== Surfaces ===== */
+  --canvas:    #EEF3F5;
+  --bg:        #F6F9FA;
+  --surface:   #FFFFFF;
+  --surface-2: #F4F7F8;
+  --surface-3: #EDF2F4;
+  --rail:      #FFFFFF;
+  --rail-ink:  #34505C;
+  --topbar:    #FFFFFF;
+
+  /* ===== Ink (text) ===== */
+  --ink-1:         #11323F;  /* primary text */
+  --ink-2:         #496170;  /* secondary text */
+  --ink-3:         #7C97A2;  /* tertiary / captions */
+  --ink-on-accent: #FFFFFF;
+
+  /* ===== Lines ===== */
+  --line:        #E1E8EB;
+  --line-soft:   #EDF1F3;
+  --line-strong: #CCD8DD;
+
+  /* ===== Accent (semantic alias of --petroleum) ===== */
+  --accent:       var(--petroleum);
+  --accent-ink:   #0E4B64;
+  --accent-soft:  #E1EBF0;
+  --accent-hover: #155B77;
+  --primary:      var(--petroleum);
+  --primary-soft: #E8F0F3;
+
+  /* ===== Status ===== */
+  --pos:       #3E7D2D;
+  --pos-soft:  #EAF6E5;
+  --go:        #3E8E2B;
+  --go-ink:    #FFFFFF;
+  --warn:      #9A7400;
+  --warn-soft: #FBF3DC;
+  --neg:       #B23A2B;
+  --neg-soft:  #FBE9E6;
+  --info-soft: #E4F0F4;
+
+  /* ===== Heat scale (8-step) ===== */
+  --heat-0: #F4F7F8;
+  --heat-1: #DCEDF1;
+  --heat-2: #B9DCD5;
+  --heat-3: #9FD08C;
+  --heat-4: #7BC25A;
+  --heat-5: #E6B53C;
+  --heat-6: #E08A4A;
+  --heat-7: #CF5B43;
+
+  /* ===== Shadows ===== */
+  --shadow-xs: 0 1px 2px rgba(14,75,100,.06);
+  --shadow-sm: 0 2px 8px rgba(14,75,100,.08);
+  --shadow-md: 0 10px 28px rgba(14,75,100,.12);
+  --shadow-lg: 0 20px 56px rgba(14,75,100,.16);
+  --shadow-focus: 0 0 0 3px rgba(14,75,100,.28);
+
+  /* ===== Radii ===== */
+  --r-xs: 4px;
+  --r-sm: 6px;
+  --r-md: 9px;
+  --r-lg: 14px;
+  --r-xl: 20px;
+  --r-pill: 999px;
+
+  /* ===== Typography stacks ===== */
+  --font: var(--font-bukra, "Bukra"), "Segoe UI", system-ui, -apple-system, sans-serif;
+  --mono: var(--font-plex-mono, "IBM Plex Mono"), "SFMono-Regular", ui-monospace, Menlo, monospace;
+
+  /* ===== Density multiplier ===== */
+  --u: 1;
+  --gap:      calc(16px * var(--u));
+  --pad-card: calc(16px * var(--u));
+  --row-h:    calc(34px * var(--u));
+  --rail-w:   236px;
+
+  /* ===== Type scale ===== */
+  --t-display: 30px;
+  --t-h1:      21px;
+  --t-h2:      17px;
+  --t-h3:      14px;
+  --t-body:    13.5px;
+  --t-small:   12.5px;
+  --t-cap:     11px;
+  --t-over:    10.5px;
+
+  /* ===== Motion ===== */
+  --ease: cubic-bezier(.22, 1, .36, 1);
+  --dur:  200ms;
+
+  color-scheme: light;
+}
+
+/* ===== Dark theme — toggled via [data-theme="dark"] ===== */
+[data-theme="dark"] {
+  --canvas:    #081820;
+  --bg:        #0A1E27;
+  --surface:   #0F2730;
+  --surface-2: #0C2129;
+  --surface-3: #143038;
+  --rail:      #0B2129;
+  --rail-ink:  #9FB9C2;
+  --topbar:    #0C242D;
+
+  --fn-bagop:    #56A7C4;
+  --fn-bagrep:   #E89A66;
+  --fn-basement: #7BCB60;
+  --fn-drivers:  #8E92E0;
+  --fn-ramp:     #E9BB3E;
+  --fn-tech:     #D27CA8;
+  --fn-trc:      #46C0B5;
+
+  --ink-1:         #E8F1F4;
+  --ink-2:         #A9C2CC;
+  --ink-3:         #6E8D98;
+  --ink-on-accent: #FFFFFF;
+
+  --line:        #1C3A44;
+  --line-soft:   #16313A;
+  --line-strong: #27505C;
+
+  --accent:       #2D7E9E;
+  --accent-ink:   #6FB8D6;
+  --accent-soft:  #0F3340;
+  --accent-hover: #3990B2;
+  --primary-soft: #10303C;
+
+  --pos:       #86D86C;
+  --pos-soft:  #17361F;
+  --go:        #5FB246;
+  --go-ink:    #06250C;
+  --warn:      #E7C051;
+  --warn-soft: #3A3214;
+  --neg:       #E8897B;
+  --neg-soft:  #3A1F1B;
+  --info-soft: #11313C;
+
+  --heat-0: #0E2730;
+  --heat-1: #123845;
+  --heat-2: #0F4A4A;
+  --heat-3: #2E6A3C;
+  --heat-4: #4E9B39;
+  --heat-5: #A88A2A;
+  --heat-6: #C06A3A;
+  --heat-7: #CF5B43;
+
+  --shadow-xs:    0 1px 2px rgba(0,0,0,.30);
+  --shadow-sm:    0 2px 10px rgba(0,0,0,.35);
+  --shadow-md:    0 12px 30px rgba(0,0,0,.45);
+  --shadow-lg:    0 24px 60px rgba(0,0,0,.55);
+  --shadow-focus: 0 0 0 3px rgba(74,139,163,.36);
+
+  color-scheme: dark;
+}
+
+/* ===== Density — toggled via [data-density="..."] ===== */
+[data-density="compact"]     { --u: .86; --row-h: 30px; }
+[data-density="cozy"]        { --u: 1; }
+[data-density="comfortable"] { --u: 1.16; --row-h: 40px; }

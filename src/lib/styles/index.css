@@ -1,0 +1,4 @@
+/* Single-import entry for consumers — pulls in tokens, base + components in order. */
+@import "./tokens.css";
+@import "./base.css";
+@import "./components.css";

@@ -1,0 +1,29 @@
+/* ============================================================
+   Tailwind 4 @theme inline — exposes the SGS palette and brand
+   fonts as Tailwind utilities. Use alongside tokens.css.
+   Examples:
+     bg-petroleum text-ink-on-accent  (utility-equivalents)
+     font-sans / font-mono            (Bukra + IBM Plex Mono)
+   ============================================================ */
+
+@theme inline {
+  --color-petroleum:     #0E4B64;
+  --color-petroleum-600: #155B77;
+  --color-petroleum-500: #1F6E8C;
+  --color-green-brand:   #61B947;
+  --color-green-700:     #4E9B39;
+  --color-green-800:     #3E7D2D;
+  --color-gold:          #E0A400;
+  --color-danger:        #C0392B;
+
+  --color-fn-bagop:    #1F6E8C;
+  --color-fn-bagrep:   #D98248;
+  --color-fn-basement: #5AA641;
+  --color-fn-drivers:  #6A6FC4;
+  --color-fn-ramp:     #E0A400;
+  --color-fn-tech:     #B85C8E;
+  --color-fn-trc:      #2C9C93;
+
+  --font-sans: "Bukra", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --font-mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, Menlo, monospace;
+}
