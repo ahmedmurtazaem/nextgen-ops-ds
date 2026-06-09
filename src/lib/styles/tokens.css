@@ -40,7 +40,7 @@
 
   /* ===== Ink (text) ===== */
   --ink-1:         #11323F;  /* primary text */
-  --ink-2:         #496170;  /* secondary text */
+  --ink-2:         #3F576B;  /* secondary text — AAA contrast (≥7:1) on white & --bg */
   --ink-3:         #7C97A2;  /* tertiary / captions */
   --ink-on-accent: #FFFFFF;
 

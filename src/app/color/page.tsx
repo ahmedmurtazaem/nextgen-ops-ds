@@ -43,7 +43,7 @@ const SURFACES = [
 
 const INK = [
   { name: "Ink 1 (primary)",   cssVar: "--ink-1", hex: "#11323F" },
-  { name: "Ink 2 (secondary)", cssVar: "--ink-2", hex: "#496170" },
+  { name: "Ink 2 (secondary)", cssVar: "--ink-2", hex: "#3F576B" },
   { name: "Ink 3 (tertiary)",  cssVar: "--ink-3", hex: "#7C97A2" },
 ];
 
