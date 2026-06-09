@@ -301,8 +301,8 @@
 .tbl{width:100%;border-collapse:separate;border-spacing:0;font-size:var(--t-small);background:var(--surface);}
 .tbl th{
   text-align:start;font-size:var(--t-over);font-weight:700;letter-spacing:.1em;text-transform:uppercase;
-  color:var(--ink-3);padding:9px 12px;border-bottom:1px solid var(--line);
-  position:sticky;top:0;background:var(--surface);z-index:1;white-space:nowrap;
+  color:var(--ink-2);padding:11px 12px;border-bottom:1px solid var(--line-strong);
+  position:sticky;top:0;background:var(--surface-2);z-index:1;white-space:nowrap;
 }
 .tbl td{padding:0 12px;height:var(--row-h);border-bottom:1px solid var(--line-soft);color:var(--ink-1);vertical-align:middle;}
 .tbl tbody tr:hover td{background:var(--surface-2);}
@@ -710,7 +710,7 @@ select.input{cursor:pointer;appearance:none;background-image:none;}
 .rec-count b{color:var(--ink-1);font-weight:700;}
 .eng-tbl-wrap{overflow:auto;max-height:calc(100vh - 360px);min-height:320px;}
 .eng-tbl{min-width:720px;}
-.eng-tbl th{background:var(--surface);}
+/* Inherit the base .tbl th surface-2 band — keeping the standard header zone across all table variants. */
 .eng-row{cursor:pointer;}
 .eng-row.sel td{background:var(--accent-soft)!important;}
 .eng-row.sel td:first-child{box-shadow:inset 3px 0 0 var(--accent);}
