@@ -8,7 +8,7 @@ const ALL_ICONS = [
   "chevR","chevD","plus","calendar","upload","download","layers","rosterCal","dispatch","chart","grid","file",
   "sliders","building","lock","check","alert","info","wand","x","panel","filter","dots","arrowUp","arrowDown",
   "arrowRight","link","spark","clipboard","pin","scale","refresh","zap","megaphone","expand","collapse","trend",
-  "beaker","planeLanding","timeline","logout","minus","pencil","trash","pause",
+  "beaker","planeLanding","timeline","logout","minus","pencil","trash","pause","eye","rewind","userPlus",
 ];
 
 export default function IconsPage() {

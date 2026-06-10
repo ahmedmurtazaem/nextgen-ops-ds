@@ -61,6 +61,9 @@ const ICONS: Record<string, string> = {
   pencil: "M4 20h4L18 10l-4-4L4 16v4 M13.5 6.5l4 4",
   trash: "M4 7h16 M9 7V4.5h6V7 M6.5 7l1 12.5h9l1-12.5",
   pause: "M8 5v14 M16 5v14",
+  eye: "M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7Z M12 15a3 3 0 1 0 0-6 3 3 0 0 0 0 6",
+  rewind: "M21 12a9 9 0 1 1-2.6-6.4 M21 3v5h-5 M12 8v4l3 2",
+  userPlus: "M15 19v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2 M8.5 9a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7 M19 8v6 M22 11h-6",
 };
 
 export function Icon({
