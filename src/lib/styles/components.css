@@ -762,7 +762,7 @@ select.input{cursor:pointer;appearance:none;background-image:none;}
 .lp-tag{font-family:var(--mono);font-size:13px;font-weight:600;color:var(--pos);letter-spacing:.02em;white-space:nowrap;}
 .ee-actions{display:grid;grid-template-columns:1.5fr 1fr;gap:9px;}
 .btn-go{background:var(--go);border-color:var(--go);color:var(--go-ink);box-shadow:var(--shadow-xs);justify-content:center;}
-.btn-go:hover{filter:brightness(1.05);}
+.btn-go:hover{background:color-mix(in srgb, var(--go) 88%, #fff);border-color:color-mix(in srgb, var(--go) 88%, #fff);}
 .btn-danger-ghost{background:transparent;border-color:var(--neg);color:var(--neg);justify-content:center;}
 .btn-danger-ghost:hover{background:var(--neg-soft);border-color:var(--neg);}
 .ee-note{padding:10px 12px;}
