@@ -24,6 +24,40 @@
   --color-fn-tech:     #B85C8E;
   --color-fn-trc:      #2C9C93;
 
+  /* — Semantic status palette (text-pos, bg-warn, …) — */
+  --color-pos:  #3E7D2D;
+  --color-warn: #9A7400;
+  --color-neg:  #B23A2B;
+  --color-info: #1F6E8C;
+
   --font-sans: "Bukra", "Segoe UI", system-ui, -apple-system, sans-serif;
   --font-mono: "IBM Plex Mono", "SFMono-Regular", ui-monospace, Menlo, monospace;
+
+  /* — Type scale — each size carries its paired line-height, so `text-h2`
+     sets size AND leading together. Generates text-display … text-over. */
+  --text-display: 30px;   --text-display--line-height: 1.15;
+  --text-h1: 21px;        --text-h1--line-height: 1.2;
+  --text-h2: 17px;        --text-h2--line-height: 1.25;
+  --text-h3: 14px;        --text-h3--line-height: 1.35;
+  --text-body: 13.5px;    --text-body--line-height: 1.5;
+  --text-small: 12.5px;   --text-small--line-height: 1.45;
+  --text-cap: 11px;       --text-cap--line-height: 1.4;
+  --text-over: 10.5px;    --text-over--line-height: 1.3;
+
+  /* — Radius scale — rounded-xs|sm|md|lg|xl|pill — */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 9px;
+  --radius-lg: 14px;
+  --radius-xl: 20px;
+  --radius-pill: 999px;
+
+  /* — Spacing — general spacing uses Tailwind's built-in 4px numeric grid
+     (p-2, gap-3, + half-steps). These named tokens cover the structural
+     constants and reference the live tokens.css vars, so they stay
+     density-aware: w-rail, h-row, p-card, gap-section. */
+  --spacing-rail: var(--rail-w);
+  --spacing-row: var(--row-h);
+  --spacing-card: var(--pad-card);
+  --spacing-section: var(--gap);
 }
