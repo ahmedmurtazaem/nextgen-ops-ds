@@ -44,7 +44,4 @@ export const NAV: NavSection[] = [
     { href: "/patterns/ribbon",     label: "Contextual ribbon" },
     { href: "/patterns/domain",     label: "Domain composites" },
   ]},
-  { title: "Product screens", links: [
-    { href: "/screens/plans",       label: "Plans" },
-  ]},
 ];
