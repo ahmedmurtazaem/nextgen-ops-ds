@@ -48,6 +48,25 @@ export default function Home() {
       </div>
 
       <div>
+        <h2>See it live</h2>
+        <p>
+          The design system isn&apos;t just docs — the product screens it powers are
+          imported straight from the NextGen Ops design project.
+        </p>
+        <Link href="/screens/plans" style={{ textDecoration: "none" }}>
+          <div className="card" style={{ padding: 16, display: "flex", alignItems: "center", gap: 14 }}>
+            <span style={{ width: 36, height: 36, borderRadius: 9, background: "var(--accent-soft)", color: "var(--accent-ink)", display: "grid", placeItems: "center", flex: "none" }}>
+              <Icon name="panel" size={18} />
+            </span>
+            <span style={{ display: "flex", flexDirection: "column", gap: 3 }}>
+              <b style={{ fontSize: 14, color: "var(--ink-1)" }}>Plans <span style={{ fontSize: 11, fontWeight: 700, letterSpacing: ".1em", textTransform: "uppercase", color: "var(--accent-ink)" }}>· live prototype</span></b>
+              <span style={{ fontSize: 12.5, color: "var(--ink-3)", lineHeight: 1.5 }}>Plan library, review queue, planning jobs, read-only preview and plan&nbsp;↔&nbsp;plan comparison.</span>
+            </span>
+          </div>
+        </Link>
+      </div>
+
+      <div>
         <h2>Start here</h2>
         <ul>
           <li><b><Link href="/integration">Integration</Link></b> — drop the package into a Next.js 16 project and import the stylesheet.</li>
